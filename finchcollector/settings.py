@@ -87,9 +87,9 @@ DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'finchcollector',
-    'USER': 'dawsonchilders',
-    'PASSWORD': 'wX9TyZBplN0k',
-    'HOST': 'ep-fancy-flower-a6ncyc77.us-west-2.aws.neon.tech',
+    'USER': os.environ['DB_USER'],
+    'PASSWORD': os.environ['DB_PW'],
+    'HOST': os.environ['DB_HOST'],
     'PORT': '5432',
     'OPTIONS': {'sslmode': 'require'},
   }
